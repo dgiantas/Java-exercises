@@ -42,24 +42,15 @@ public class PlayingEmployees {
         List<Advisable> advisers = new ArrayList();
         List<Driving> drivers = new ArrayList();
 
-        boolean isAdvisable1 = (teacher1 instanceof Advisable);
-        boolean isAdvisable2 = teacher2 instanceof Advisable;
-        boolean isAdvisable3 = director1 instanceof Advisable;
-        boolean isAdvisable4 = director2 instanceof Advisable;
-        boolean isAdvisable5 = receptionist instanceof Advisable;
-        boolean isDriving1 = teacher1 instanceof Driving;
-        boolean isDriving2 = teacher2 instanceof Driving;
-        boolean isDriving3 = director1 instanceof Driving;
-        boolean isDriving4 = director1 instanceof Driving;
-        boolean isDriving5 = receptionist instanceof Driving;
-
-        advisers.add(teacher1);
-        advisers.add(teacher2);
-        advisers.add(director1);
-        advisers.add(director2);
-        drivers.add(director2);
-        drivers.add(director1);
-        drivers.add(receptionist);
+        for (Employee employee:employeeList){
+           if(employee instanceof Advisable){
+               advisers.add(employee);
+               System.out.println("The list of the advisers is : " + advisers);
+           }
+           if(employee instanceof Driving){
+               drivers.add(employee);
+              System.out.println( "The list of the drivers is " + drivers));}
+           }
 
         for (Driving driver : drivers) {
             System.out.print("The list of the drivers is " + drivers);
