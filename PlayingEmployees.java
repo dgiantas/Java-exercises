@@ -39,25 +39,25 @@ public class PlayingEmployees {
             employee.work();
         }
 
-        List<Advisable> advisers = new ArrayList();
+        List<Advisers> advisers = new ArrayList();
         List<Driving> drivers = new ArrayList();
 
         for (Employee employee:employeeList){
            if(employee instanceof Advisable){
-               advisers.add(employee);
-               System.out.println("The list of the advisers is : " + advisers);
-           }
+               advisers.add((Advisable)employee);
+               System.out.println(employee.getName() + " is an advisor.");
+          
            if(employee instanceof Driving){
-               drivers.add(employee);
-              System.out.println( "The list of the drivers is " + drivers));}
+               drivers.add((Driving)employee);
+              System.out.println(employee.getName() + " is a driver.") }
            }
-
+        
         for (Driving driver : drivers) {
             System.out.print("The list of the drivers is " + drivers);
         }
         for (Advisable advisor : advisers) {
             System.out.println("The list of the advisers is " +advisers);
-        }
+       }
     }
 
 }
